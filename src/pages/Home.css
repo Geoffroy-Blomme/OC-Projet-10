@@ -1,0 +1,70 @@
+@import "./../constants/global.css";
+
+.hero {
+  margin-top: 16px;
+  height: 100%;
+}
+.hero__img-container {
+  height: 111px;
+  position: relative;
+}
+.hero__img {
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./../assets/homepage_hero.png");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__text {
+  position: absolute;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  /* or 24px */
+  left: 15px;
+  top: 31px;
+  margin: 0;
+  color: #ffffff;
+  white-space: pre-wrap;
+}
+
+.logements-container {
+  margin-top: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 63px;
+  }
+  .hero__img-container {
+    height: 223px;
+  }
+  .hero__img {
+    border-radius: 25px;
+  }
+  .hero__text {
+    font-size: 48px;
+    line-height: 68.45px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  .logements-container {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+  }
+  .logements {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin: 56px 50px;
+  }
+}

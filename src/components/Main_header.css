@@ -1,0 +1,42 @@
+@import "./../constants/colors.css";
+@import "./../constants/global.css";
+
+.MainHeader {
+  height: 47px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MainHeader__logo-container {
+  height: 100%;
+  width: auto;
+}
+
+.MainHeader__logo-link {
+  height: 100%;
+  width: auto;
+}
+
+.MainHeader__logo-container__logo {
+  height: 100%;
+  width: auto;
+}
+
+.MainHeader__nav-bar__elt-container__elt {
+  text-decoration: none;
+  color: var(--mainRed);
+  font-family: "Montserrat";
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .MainHeader {
+    height: 68px;
+  }
+  .MainHeader__nav-bar__elt-container__elt {
+    margin-left: 57px;
+    font-size: 24px;
+  }
+}
