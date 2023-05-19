@@ -3,9 +3,12 @@ import "../components/Home_thumb.css";
 import { Link } from "react-router-dom";
 
 export default function HomeThumb(props) {
+  const linkTo = {
+    pathname: `/Fiche-logement/${props.id}`,
+  };
   return (
     <>
-      <Link to="Fiche-Logement" className="thumb">
+      <Link to={linkTo} className="thumb">
         <div className="thumb__img-container">
           <img
             src={props.cover}

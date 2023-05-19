@@ -1,0 +1,73 @@
+@import "./../constants/colors.css";
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__header {
+  background-color: var(--mainRed);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  z-index: 2;
+  position: inherit;
+  cursor: pointer;
+}
+
+.dropdown__header svg {
+  height: auto;
+  width: 16px;
+  margin-right: 10px;
+  transition: transform 0.25s;
+}
+
+.dropdown__header__title {
+  font-family: "MontSerrat";
+  font-size: 13px;
+  margin: 0;
+  margin-left: 12px;
+}
+
+.dropdown__content {
+  color: var(--mainRed);
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+  top: 25px;
+}
+
+.dropdown__content__text {
+  background-color: #f6f6f6;
+  padding: 20px 12px 0px 12px;
+  border-radius: 5px;
+}
+
+.dropdown__content__list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown__header {
+    height: 52px;
+    border-radius: 10px;
+  }
+  .dropdown__header__title {
+    font-size: 18px;
+  }
+
+  .dropdown__content {
+    top: 42px;
+  }
+  .dropdown__content__text {
+    font-size: 18px;
+    padding: 40px 12px 27px 20px;
+    padding-bottom: 27px;
+    border-radius: 10px;
+  }
+}

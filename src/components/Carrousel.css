@@ -1,0 +1,69 @@
+.carrousel {
+}
+
+.carrousel__img-container {
+  height: 255px;
+  width: auto;
+  position: relative;
+}
+
+.carrousel__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carrousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  cursor: pointer;
+}
+
+.carrousel__arrow--back {
+  left: 6px;
+}
+
+.carrousel__arrow--forward {
+  right: 6px;
+}
+
+.carrousel__numerotation {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .carrousel__img-container {
+    width: auto;
+    height: 415px;
+  }
+
+  .carrousel__img {
+    border-radius: 25px;
+  }
+
+  .carrousel__arrow {
+    height: 80px;
+    width: auto;
+  }
+
+  .carrousel__arrow--back {
+    left: 24px;
+  }
+
+  .carrousel__arrow--forward {
+    right: 24px;
+  }
+
+  .carrousel__numerotation {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-family: "Montserrat";
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(0, -50%);
+  }
+}

@@ -5,6 +5,8 @@ import Logo from "../assets/LOGO.jpg";
 import "./../constants/colors.css";
 
 export default function MainHeader(props) {
+  const path = window.location.pathname;
+  const underLineStyle = `1px solid var(--mainRed)`;
   return (
     <div className="MainHeader">
       <Link className="MainHeader__logo-link" to="/">
@@ -20,9 +22,8 @@ export default function MainHeader(props) {
         <div className="MainHeader__nav-bar__elt-container">
           <Link
             style={{
-              borderBottom: props.isUnderLined
-                ? `1px solid var(--mainRed)`
-                : "none",
+              borderBottom:
+                path === "/Home" || path === "/" ? `${underLineStyle}` : "none",
             }}
             to="/Home"
             className="MainHeader__nav-bar__elt-container__elt"
@@ -30,6 +31,9 @@ export default function MainHeader(props) {
             Accueil
           </Link>
           <Link
+            style={{
+              borderBottom: path === "/A-propos" ? `${underLineStyle}` : "none",
+            }}
             to="/A-propos"
             className="MainHeader__nav-bar__elt-container__elt"
           >

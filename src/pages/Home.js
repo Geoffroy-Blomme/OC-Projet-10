@@ -1,14 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../pages/Home.css";
 
 import logements from "./../assets/logements.json";
-
+import MainFooter from "../components/Main_footer";
 import HomeThumb from "../components/Home_thumb";
 import MainHeader from "../components/Main_Header";
 
 export default function Home() {
-  console.log(logements);
   return (
     <>
       <MainHeader isUnderLined={true} />
@@ -23,7 +21,8 @@ export default function Home() {
           {logements.map((logement, index) => {
             return (
               <HomeThumb
-                key={index}
+                key={logement.id}
+                id={logement.id}
                 title={logement.title}
                 cover={logement.cover}
               />
@@ -31,7 +30,7 @@ export default function Home() {
           })}
         </div>
       </div>
-      <Link to="Fiche-Logement">Click to see the fiche-logement</Link>
+      <MainFooter />
     </>
   );
 }
